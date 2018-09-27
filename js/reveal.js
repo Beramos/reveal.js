@@ -724,7 +724,9 @@
 					top = ( pageHeight - slideHeight ) / 2;
 
 				var contentHeight = slide.scrollHeight;
-				var numberOfPages = Math.max( Math.ceil( contentHeight / pageHeight ), 1 );
+				var numberOfPages =  1; // Hacky fix
+				
+				//Math.max( Math.ceil( contentHeight / pageHeight ), 1 );
 
 				// Adhere to configured pages per slide limit
 				numberOfPages = Math.min( numberOfPages, config.pdfMaxPagesPerSlide );
